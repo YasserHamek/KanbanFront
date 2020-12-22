@@ -18,7 +18,7 @@ export class ItemService {
     return this.http.get<IItem[]>(this.baseUrl)
   }
 
-  postItem(ItemName: string,  State: string ,  UserName: string ,  Description: string ,  Place: string, requiredTime : number){
+  postItem(ItemName: string,  State: string,  Description: string, UserName: string,  Place: string, requiredTime : number){
     this.http.post<any>(this.baseUrl,{
       "name": ItemName,
       "heading": State,
