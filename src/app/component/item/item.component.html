@@ -1,0 +1,107 @@
+<html >
+<head>
+
+</head>
+
+<body>
+
+  <div class="p-formgroup-inline">
+    <div class="p-field">
+        <label for="ItemName" class="p-sr-only">ItemName</label>
+        <input [(ngModel)]="ItemName" id="ItemName" type="text" pInputText placeholder="ItemName"> 
+    </div>
+    <div class="p-field">
+      <label for="State" class="p-sr-only">State</label>
+      <input [(ngModel)]="State" id="State" type="text" pInputText placeholder="State"> 
+    </div>
+    <div class="p-field">
+        <label for="UserName" class="p-sr-only">UserName</label>
+        <input [(ngModel)]="UserName" id="UserName" type="text" pInputText placeholder="UserName"> 
+    </div>
+    <div class="p-field">
+      <label for="Description" class="p-sr-only">Description</label>
+      <input [(ngModel)]="Description" id="Description" type="text" pInputText placeholder="Description"> 
+  </div>
+  <div class="p-field">
+    <label for="Place" class="p-sr-only">Place</label>
+    <input [(ngModel)]="Place" id="Place" type="text" pInputText placeholder="Place"> 
+  </div>
+  <div class="p-field">
+    <label for="requiredTime" class="p-sr-only">requiredTime</label>
+    <input [(ngModel)]="requiredTime" id="requiredTime" type="text" pInputText placeholder="requiredTime"> 
+  </div>
+    <button  pButton type="button" label="Submit" (click)="postItem()"></button>
+  </div>
+
+  <div class="p-grid">
+
+    <div class="p-col">
+        <div class="box2-1"> 
+          
+          <div class="p-col">
+            <div class="box"> Waiting </div>
+          </div>
+
+          <p-card *ngFor="let item of items| waiting" header="{{item.name}} id : {{item.id}}" 
+          subheader="{{item.user.name}},  requiredTime : {{item.requiredTime}} day" 
+          [style]="{width: '360px'}" styleClass="p-card-shadow">
+    
+              <p>{{item.description}}</p>
+            <ng-template pTemplate="footer">
+              <p> {{item.place}} </p>
+              <p-button class="Next" label="Next" icon="pi pi-check" (click)="moveNext(item)" ></p-button>
+              <button class="Delete" pButton type="button" label="Delete" icon="pi pi-times" (click)="delete(item)" ></button>
+            </ng-template>
+          </p-card>
+
+        </div>
+    </div>
+
+    <div class="p-col">
+        <div class="box2-2"> 
+
+          <div class="p-col">
+            <div class="box">Processing</div>
+          </div>
+
+          <p-card *ngFor="let item of items| processing" header="{{item.name}} id : {{item.id}}" 
+          subheader="{{item.user.name}},  requiredTime : {{item.requiredTime}} day" 
+          [style]="{width: '360px'}" styleClass="p-card-shadow">
+    
+              <p>{{item.description}}</p>
+            <ng-template pTemplate="footer">
+              <p> {{item.place}} </p>
+              <p-button class="Next" label="Next" icon="pi pi-check" (click)="moveNext(item)" ></p-button>
+              <button class="Delete" pButton type="button" label="Delete" icon="pi pi-times" (click)="delete(item)" ></button>
+            </ng-template>
+          </p-card>
+
+        </div>
+    </div>
+
+    <div class="p-col">
+      <div class="box2-3"> 
+
+        <div class="p-col">
+          <div class="box">Done</div>
+        </div>
+
+        <p-card *ngFor="let item of items| done" header="{{item.name}} id : {{item.id}}" 
+        subheader="{{item.user.name}},  requiredTime : {{item.requiredTime}} day" 
+        [style]="{width: '360px'}" styleClass="p-card-shadow">
+  
+            <p>{{item.description}}</p>
+          <ng-template pTemplate="footer">
+            <p> {{item.place}} </p>
+            <p-button class="Next" label="Next" icon="pi pi-check" (click)="moveNext(item)" ></p-button>
+            <button class="Delete" pButton type="button" label="Delete" icon="pi pi-times" (click)="delete(item)" ></button>
+          </ng-template>
+        </p-card>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
