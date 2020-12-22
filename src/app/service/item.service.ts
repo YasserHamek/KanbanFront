@@ -19,7 +19,7 @@ export class ItemService {
   }
 
   postItem(ItemName: string,  State: string ,  UserName: string ,  Description: string ,  Place: string, requiredTime : number){
-    this.http.post<any>('https://kanban-back-spring.herokuapp.com/item',{
+    this.http.post<any>(this.baseUrl,{
       "name": ItemName,
       "heading": State,
       "deadline": "2020-11-5",
@@ -48,12 +48,12 @@ export class ItemService {
   }
 
   updateItemState(item: IItem, itemHeading: string){
-    this.http.put<any>('https://kanban-back-spring.herokuapp.com/item?itemId='+item.id+'&itemHeading='+itemHeading,
+    this.http.put<any>(this.baseUrl+'?itemId='+item.id+'&itemHeading='+itemHeading,
     {}).subscribe((data)=>console.log(data));
   }
 
   deleteItem(itemId: number){
-    this.http.delete<any>('https://kanban-back-spring.herokuapp.com/item?itemId='+itemId).subscribe((data)=>console.log(data));
+    this.http.delete<any>(this.baseUrl+'?itemId='+itemId).subscribe((data)=>console.log(data));
   }
 
 }
