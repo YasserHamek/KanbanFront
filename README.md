@@ -1,20 +1,20 @@
-# KanbanBoard
+# Kanban Front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+The application is deployed with heroku at : https://kanaban-front-angular.herokuapp.com/ (the page may take some time to charge)
 
-## Development server
+**To run the application locally :**
 
-​				Back End :
+​			   Back-End :
 
-- Run the database script `S1/TAA - Spring Boot - JPA - Hibernate - Techniques Avancées Architectures Logicielles -/TP3 - Part3/hsqldb/hsqldb/run_server.sh`
+- Run the database script `/hsqldb/run_server.sh`
 
-- `Run AS -> Java Application` the class `S1/TAA - Spring Boot - JPA - Hibernate - Techniques Avancées Architectures Logicielles -/TP3 - Part3/src/main/java/app/Application` on Eclipse.
+- `Run AS -> Java Application` the class `/app/Application` on Eclipse.
 
   ​		Front-End :
 
 - Run `npm install` 
 
-- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
