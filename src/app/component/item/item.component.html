@@ -12,7 +12,12 @@
     </div>
     <div class="p-field">
       <label for="State" class="p-sr-only">State</label>
-      <input [(ngModel)]="State" id="State" type="text" pInputText placeholder="State"> 
+      <input [(ngModel)]="State" id="State" type="select" list="states">
+      <datalist id="states">
+        <option value="Waiting">
+        <option value="Processing">
+        <option value="Done">
+      </datalist>
     </div>
     <div class="p-field">
         <label for="UserName" class="p-sr-only">UserName</label>
