@@ -2,24 +2,20 @@ import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from 'src/app/service/item.service';
 
-
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css']
+  styleUrls: ['./item.component.scss']
 })
 export class ItemComponent implements OnInit {
-  
+
   ItemName: string = "";
   State: string = "";
   UserName: string = "";
   Description: string = "";
   Place: string = "";
   requiredTime: number =0;
-
   items : IItem[] = [];
-
-  
 
   constructor(private itemService : ItemService) {}
 
@@ -27,19 +23,18 @@ export class ItemComponent implements OnInit {
     this.itemService.getItems().subscribe((data)=>{
       this.items = [...data];
     })
-  }  
+  }
 
   postItem(){
     this.itemService.postItem(this.ItemName, this.State , this.Description, this.UserName , this.Place, this.requiredTime )
-    
+
     this.itemService.getItems().subscribe((data)=>{
       this.items = [...data];
-    })  
+    })
     location.reload();
   }
 
   moveNext(item : IItem) {
-
     if(item.heading=="heading" || item.heading == "Done" || item.heading==""){
       this.itemService.updateItemState(item,"Waiting");
 
@@ -51,11 +46,10 @@ export class ItemComponent implements OnInit {
 
     } else if(item.heading=="Done" ){
       this.itemService.updateItemState(item,"Waiting");
-
     }
     this.itemService.getItems().subscribe((data)=>{
       this.items = [...data];
-    })  
+    })
     location.reload();
   }
 
@@ -63,10 +57,9 @@ export class ItemComponent implements OnInit {
     this.itemService.deleteItem(item.id);
     this.itemService.getItems().subscribe((data)=>{
       this.items = [...data];
-    })  
+    })
     location.reload();
   }
-
 }
 
 export interface IItem {

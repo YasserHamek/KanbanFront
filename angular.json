@@ -28,7 +28,7 @@
               "node_modules/primeng/resources/themes/saga-blue/theme.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeflex/primeflex.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -122,6 +122,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "KanbanBoard"
+    }
+  },
+  "defaultProject": "KanbanBoard",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

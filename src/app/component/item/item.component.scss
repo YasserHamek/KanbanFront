@@ -1,0 +1,75 @@
+#container{
+  margin: 1rem;
+  padding: 1rem;
+
+  .p-formgroup-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+    .p-field{
+      margin-top: 0.5%;
+    }
+  }
+
+  .p-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .p-col {
+      min-width: 300px;
+
+      .box {
+        text-align: center;
+        padding-bottom: 1rem;
+        border-radius: 4px;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
+        margin: 2%;
+      }
+
+      #box2-1 {
+        background-color: rgb(253, 220, 162);
+      }
+
+      #box2-2 {
+        background-color: rgb(247, 191, 94);
+      }
+
+      #box2-3 {
+        background-color: rgb(252, 162, 6);
+      }
+
+      .title {
+        background-color: var(--surface-e);
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 4px;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
+        margin-top: 1%;
+        margin-bottom: 3%;
+      }
+
+      :host ::ng-deep .p-card {
+        background-color: ghostwhite;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
+        margin-bottom: 1%;
+        margin-left: 10%;
+      }
+
+      .delete {
+        background-color: red;
+        margin-left: 25%;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
+      }
+
+      .next {
+          box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
+      }
+    }
+  }
+}
