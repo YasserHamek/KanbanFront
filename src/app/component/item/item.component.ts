@@ -35,12 +35,12 @@ export class ItemComponent implements OnInit {
         name: "Yasser",
       }
     },{
-      name: "M2-S2",
+      name: "Fullstack Java/Angular Developper",
       id: 598,
-      heading: "Waitting",
-      description: "Obtention du diplome",
+      heading: "Waiting",
+      description: "Become a Senior Developper",
       requiredTime: 730,
-      place: "Rennes",
+      place: " ",
       user: {
         name: "Yasser",
       }
@@ -55,12 +55,11 @@ export class ItemComponent implements OnInit {
         name: "Yasser",
       }
     },{
-      name: "M2-S2",
+      name: "Recherche de travail",
       id: 598,
       heading: "Processing",
-      description: "Obtention du diplome",
+      description: "Trouver l'entreprise ideal et parfaite!",
       requiredTime: 730,
-      place: "Rennes",
       user: {
         name: "Yasser",
       }
