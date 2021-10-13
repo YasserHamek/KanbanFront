@@ -24,11 +24,18 @@
       min-width: 300px;
 
       .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        padding-bottom: 1rem;
+        gap: 1rem;
+
+        padding: 1rem;
         border-radius: 4px;
         box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
         margin: 2%;
+
       }
 
       #box2-1 {
@@ -53,23 +60,25 @@
         margin-top: 1%;
         margin-bottom: 3%;
       }
-
-      :host ::ng-deep .p-card {
-        background-color: ghostwhite;
-        box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
-        margin-bottom: 1%;
-        margin-left: 10%;
-      }
-
-      .delete {
-        background-color: red;
-        margin-left: 25%;
-        box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
-      }
-
-      .next {
-          box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
-      }
     }
   }
 }
+
+:host ::ng-deep .p-card {
+  background-color: ghostwhite;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
+  max-width: 90%;
+  margin: auto;
+
+  .delete {
+    background-color: red;
+    margin-left: 25%;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
+  }
+
+  .next {
+      box-shadow: 0 2px 1px -1px rgba(0,0,0,.9), 0 1px 1px 0 rgba(0,0,0,.23), 0 1px 3px 0 rgba(0,0,0,.20);
+  }
+}
+
+

@@ -35,7 +35,7 @@
 
   <div class="p-grid">
     <div class="p-col">
-        <div id="box2-1" class="box">
+        <div class="box" id="box2-1">
           <div class="p-col">
             <div class="title"> Waiting </div>
           </div>
@@ -45,32 +45,32 @@
               <p>{{item.description}}</p>
             <ng-template pTemplate="footer">
               <p> {{item.place}} </p>
-              <p-button class="Next" label="Next" icon="pi pi-check" (click)="moveNext(item)" ></p-button>
-              <button class="Delete" pButton type="button" label="Delete" icon="pi pi-times" (click)="delete(item)" ></button>
+              <p-button class="next" label="Next" icon="pi pi-check" (click)="moveNext(item)" ></p-button>
+              <button class="delete" pButton type="button" label="Delete" icon="pi pi-times" (click)="delete(item)" ></button>
             </ng-template>
           </p-card>
         </div>
     </div>
 
     <div class="p-col">
-        <div id="box2-2" class="box">
+        <div class="box" id="box2-2" >
           <div class="p-col">
             <div class="title">Processing</div>
           </div>
-          <p-card *ngFor="let item of items| processing" header="{{item.name}} id : {{item.id}}"
+          <p-card class="card" *ngFor="let item of items| processing" header="{{item.name}} id : {{item.id}}"
           subheader="{{item.user.name}},  requiredTime : {{item.requiredTime}} day"
           [style]="{width: '360px'}" styleClass="p-card-shadow">
               <p>{{item.description}}</p>
-            <ng-template pTemplate="footer">
+            <ng-template class="card-footer" pTemplate="footer">
               <p> {{item.place}} </p>
-              <p-button class="Next" label="Next" icon="pi pi-check" (click)="moveNext(item)" ></p-button>
-              <button class="Delete" pButton type="button" label="Delete" icon="pi pi-times" (click)="delete(item)" ></button>
+              <p-button class="next" label="Next" icon="pi pi-check" (click)="moveNext(item)" ></p-button>
+              <button class="delete" pButton type="button" label="Delete" icon="pi pi-times" (click)="delete(item)" ></button>
             </ng-template>
           </p-card>
         </div>
     </div>
     <div class="p-col">
-      <div id="box2-3" class="box">
+      <div class="box" id="box2-3" >
         <div class="p-col">
           <div class="title">Done</div>
         </div>
@@ -80,8 +80,8 @@
             <p>{{item.description}}</p>
           <ng-template pTemplate="footer">
             <p> {{item.place}} </p>
-            <p-button class="Next" label="Next" icon="pi pi-check" (click)="moveNext(item)" ></p-button>
-            <button class="Delete" pButton type="button" label="Delete" icon="pi pi-times" (click)="delete(item)" ></button>
+            <p-button class="next" label="Next" icon="pi pi-check" (click)="moveNext(item)" ></p-button>
+            <button class="delete" pButton type="button" label="Delete" icon="pi pi-times" (click)="delete(item)" ></button>
           </ng-template>
         </p-card>
       </div>

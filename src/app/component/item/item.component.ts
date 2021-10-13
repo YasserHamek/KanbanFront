@@ -21,7 +21,49 @@ export class ItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.itemService.getItems().subscribe((data)=>{
-      this.items = [...data];
+      this.items.push(...data);
+    })
+
+    this.items.push({
+      name: "M2-S2",
+      id: 598,
+      heading: "Done",
+      description: "Obtention du diplome",
+      requiredTime: 730,
+      place: "Rennes",
+      user: {
+        name: "Yasser",
+      }
+    },{
+      name: "M2-S2",
+      id: 598,
+      heading: "Waitting",
+      description: "Obtention du diplome",
+      requiredTime: 730,
+      place: "Rennes",
+      user: {
+        name: "Yasser",
+      }
+    },{
+      name: "M2-S2",
+      id: 598,
+      heading: "Done",
+      description: "Obtention du diplome",
+      requiredTime: 730,
+      place: "Rennes",
+      user: {
+        name: "Yasser",
+      }
+    },{
+      name: "M2-S2",
+      id: 598,
+      heading: "Processing",
+      description: "Obtention du diplome",
+      requiredTime: 730,
+      place: "Rennes",
+      user: {
+        name: "Yasser",
+      }
     })
   }
 
@@ -63,16 +105,16 @@ export class ItemComponent implements OnInit {
 }
 
 export interface IItem {
-  id:           number;
-  name:         string;
-  heading:      string;
-  deadline:     string;
-  user:         User;
-  requiredTime: number;
-  tagsList:     Tag[];
-  place:        string;
-  url:          string;
-  description:  string;
+  id?:           number;
+  name?:         string;
+  heading?:      string;
+  deadline?:     string;
+  user?:         User;
+  requiredTime?: number;
+  tagsList?:     Tag[];
+  place?:        string;
+  url?:          string;
+  description?:  string;
 }
 
 export interface Tag {
@@ -83,8 +125,8 @@ export interface Tag {
 
 
 export interface User {
-  id:       number;
-  name:     string;
-  function: string;
-  itemList: IItem[];
+  id?:       number;
+  name?:     string;
+  function?: string;
+  itemList?: IItem[];
 }
